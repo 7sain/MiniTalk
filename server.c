@@ -6,7 +6,7 @@
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 21:58:35 by hualhash          #+#    #+#             */
-/*   Updated: 2023/01/21 23:14:54 by hualhash         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:46:23 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	handler(int signal)
 
 int	main(void)
 {
-	int	pid;
+	pid_t	pid;
 
 	pid = getpid();
 	ft_printf("Process Identifier (PID): %d\n", pid);
