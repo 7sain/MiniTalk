@@ -6,7 +6,7 @@
 /*   By: hualhash <hualhash@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 22:02:35 by hualhash          #+#    #+#             */
-/*   Updated: 2023/01/23 16:55:27 by hualhash         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:45:16 by hualhash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,14 @@ int	main(int ac, char **av)
 	else
 	{
 		pid = ft_atoi(av[1]);
+		if (pid == 0)
+		{
+			ft_printf("Incorrect PID!!\n");
+			return (0);
+		}
 		if (pid < 0)
 		{
-			ft_printf("Error! Did you mean: %d", (pid * -1));
+			ft_printf("Error! Did you mean: %d\n", (pid * -1));
 			return (0);
 		}
 		send_bit(pid, av[2], ft_strlen(av[2]));
